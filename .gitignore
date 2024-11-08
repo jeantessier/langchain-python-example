@@ -1,0 +1,6 @@
+# Ignore virtual environment
+# Recreate instead with `python3 -m venv .venv
+.venv
+
+# Ignore IDE files
+.idea

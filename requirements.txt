@@ -1,6 +1,6 @@
 langchain
 langchain-openai
 langchain-anthropic
-# langchain-gemini
+langchain-google-genai
 
 python-dotenv

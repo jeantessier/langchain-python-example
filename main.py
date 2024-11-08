@@ -1,5 +1,6 @@
 from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage, SystemMessage
+from langchain_core.output_parsers import StrOutputParser
 from langchain_openai import ChatOpenAI
 
 load_dotenv()
@@ -11,4 +12,7 @@ messages = [
     HumanMessage(content="hi!"),
 ]
 
-model.invoke(messages)
+result = model.invoke(messages)
+
+parser = StrOutputParser()
+parser.invoke(result)

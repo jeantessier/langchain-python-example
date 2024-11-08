@@ -2,12 +2,14 @@ from dotenv import load_dotenv
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
+from langchain_anthropic import ChatAnthropic
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 load_dotenv()
 
 # model = ChatOpenAI(model="gpt-4o-mini")
-model = ChatGoogleGenerativeAI(model="gemini-1.5-flash")
+model = ChatAnthropic(model="claude-3-5-sonnet-20240620")
+# model = ChatGoogleGenerativeAI(model="gemini-1.5-flash")
 
 system_template = "Translate the following into {language}:"
 prompt_template = ChatPromptTemplate.from_messages(

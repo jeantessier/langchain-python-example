@@ -4,3 +4,6 @@
 
 # Ignore IDE files
 .idea
+
+# Ignore local configuration file
+.env

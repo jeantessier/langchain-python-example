@@ -2,3 +2,5 @@ langchain
 langchain-openai
 langchain-anthropic
 # langchain-gemini
+
+python-dotenv

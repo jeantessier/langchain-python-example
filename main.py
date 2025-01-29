@@ -1,3 +1,4 @@
+import os
 from argparse import ArgumentParser
 from dotenv import load_dotenv
 from langchain_core.output_parsers import StrOutputParser
@@ -13,11 +14,11 @@ argument_parser.add_argument("-m", "--model", help="Which model to connect to", 
 args = argument_parser.parse_args()
 
 if args.model == "openai":
-    model = ChatOpenAI(model="gpt-4o-mini")
+    model = ChatOpenAI(model=os.environ["OPENAI_MODEL"], api_key=os.environ["OPENAI_API_KEY"])
 elif args.model == "anthropic":
-    model = ChatAnthropic(model="claude-3-5-sonnet-20240620")
+    model = ChatAnthropic(model=os.environ["ANTHROPIC_MODEL"], api_key=os.environ["ANTHROPIC_API_KEY"])
 elif args.model == "google":
-    model = ChatGoogleGenerativeAI(model="gemini-1.5-flash")
+    model = ChatGoogleGenerativeAI(model=os.environ["GOOGLE_MODEL"], api_key=os.environ["GOOGLE_API_KEY"])
 else:
     raise ValueError(f"Unknown model {args.model}")
 

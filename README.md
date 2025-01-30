@@ -34,3 +34,33 @@ conda install --name langchain --file requirements.txt --channel conda-forge
 . .venv/bin/activate
 conda activate langchain
 ```
+
+## To Run
+
+The sample logic is in the file `main.py`.
+
+To run against OpenAI's ChatGPT:
+
+```bash
+python main.py --model openai
+```
+
+To run against Anthropic's Claude:
+
+```bash
+python main.py --model anthropic
+```
+
+To run against Google's Gemini:
+
+```bash
+python main.py --model google
+```
+
+To run against DeekSeek's R1:
+
+```bash
+python main.py --model deepseek
+```
+
+If you don't specify `--model`, it will default to `openai` and use ChatGPT.

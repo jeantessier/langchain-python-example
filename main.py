@@ -6,6 +6,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain_anthropic import ChatAnthropic
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_deepseek import ChatDeepSeek
 
 load_dotenv()
 
@@ -19,6 +20,8 @@ elif args.model == "anthropic":
     model = ChatAnthropic(model=os.environ["ANTHROPIC_MODEL"], api_key=os.environ["ANTHROPIC_API_KEY"])
 elif args.model == "google":
     model = ChatGoogleGenerativeAI(model=os.environ["GOOGLE_MODEL"], api_key=os.environ["GOOGLE_API_KEY"])
+elif args.model == "deepseek":
+    model = ChatDeepSeek(model=os.environ["DEEPSEEK_MODEL"], api_key=os.environ["DEEPSEEK_API_KEY"])
 else:
     raise ValueError(f"Unknown model {args.model}")
 

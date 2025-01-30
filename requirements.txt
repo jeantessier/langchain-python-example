@@ -2,5 +2,6 @@ langchain
 langchain-openai
 langchain-anthropic
 langchain-google-genai
+langchain-deepseek-official
 
 python-dotenv

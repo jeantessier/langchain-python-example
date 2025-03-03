@@ -4,4 +4,6 @@ langchain-anthropic
 langchain-google-genai
 langchain-deepseek-official
 
+langsmith
+
 python-dotenv

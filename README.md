@@ -24,21 +24,19 @@ file.
 ```bash
 python3 -m venv .venv
 . .venv/bin/activate
-pip install langsmith
-conda create --name langchain
-conda install --name langchain --file requirements.txt --channel conda-forge
+pip install -r requirements.txt
 ```
 
 ### Activate the Virtual Environment
 
 ```bash
 . .venv/bin/activate
-conda activate langchain
 ```
 
 ## To Run
 
 The sample logic is in the file `main.py`.
+It asks for an Italian translation of "Hi".
 
 To run against OpenAI's ChatGPT:
 
